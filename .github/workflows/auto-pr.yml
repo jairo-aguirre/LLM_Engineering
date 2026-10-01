@@ -1,0 +1,24 @@
+name: Auto Create Pull Request
+
+on:
+  push:
+    branches:
+      - 'feature/*'
+
+jobs:
+  create-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create Pull Request using GitHub CLI
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Create a PR targetting main if one doesn't exist yet
+          gh pr create \
+            --base main \
+            --head ${{ github.ref_name }} \
+            --title "Progress Update from ${{ github.ref_name }}" \
+            --body "Automated PR generated from recent commits on branch \`${{ github.ref_name }}\`. Please review changes before merging into \`main\`." || echo "PR already exists or no new commits."

@@ -4,36 +4,7 @@
 
 ![Voyage](assets/core.jpg)
 
-_If you're looking at this in Cursor, please right click on the filename in the Explorer on the left, and select "Open preview", to view the formatted version._
-
-I'm so happy you're joining me on this path. We'll be building immensely satisfying projects in the coming weeks. Some will be easy, some will be challenging, many will ASTOUND you! The projects build on each other so you develop deeper and deeper expertise each week. One thing's for sure: you're going to have a lot of fun along the way.
-
-Any questions, please ask me on Udemy or at ed@edwarddonner.com. More details at the top of the course resources [here](https://edwarddonner.com/2024/11/13/llm-engineering-resources/).
-
-### Answers to the most common questions
-
-[My Cursor looks different to yours (new splash screen)](https://edwarddonner.com/avatar?q=54)  
-[Can I use Gemini or free models instead of OpenAI Yes!](https://edwarddonner.com/avatar?q=8)  
-[Where are the course resources](https://edwarddonner.com/2024/11/13/llm-engineering-resources/)   
-[How does this course fit in with your others?](https://edwarddonner.com/curriculum)  
-[Can I take this course with no programming background?](https://edwarddonner.com/avatar?q=2)  
-[What job can I get after taking this course?](https://edwarddonner.com/avatar?q=3)  
-
-### Before you begin
-
-I'm here to help you be most successful with your learning. If you hit any snafus, or if you have any ideas on how I can improve the course, please do reach out in the platform or by emailing me direct (ed@edwarddonner.com). It's always great to connect with people on LinkedIn to build up the community - you'll find me here:  
-https://www.linkedin.com/in/eddonner/   
-
-And I'm starting to build a YouTube channel with extra content - please [check it out here](https://youtube.com/@edward.donner).  
-And this is new to me, but I'm also trying out X/Twitter at [@edwarddonner](https://x.com/edwarddonner) - if you're on X, please show me how it's done 😂  
-
-Resources to accompany the course, including the slides and useful links, are here:  
-https://edwarddonner.com/2024/11/13/llm-engineering-resources/
-
-My digital twin that can answer common FAQ (and get me involved!) is here:  
-https://edwarddonner.com/avatar/
-
-## Instant Gratification instructions for Week 1, Day 1 - with Llama 3.2 **not** Llama 3.3
+## Instructions for Week 1, Day 1 - with Llama 3.2 **not** Llama 3.3
 
 ### Important note: see my warning about Llama3.3 below - it's too large for home computers! Stick with llama3.2 - several students have missed this warning...
 
@@ -44,13 +15,7 @@ We will start the course by installing Ollama so you can see results immediately
 4. If this doesn't work: you may need to run `ollama serve` in another Powershell (Windows) or Terminal (Mac), and try step 3 again. On a PC, you may need to be running in an Admin instance of Powershell.  
 5. And if that doesn't work on your box, I've set up this on the cloud. This is on Google Colab, which will need you to have a Google account to sign in, but is free:  https://colab.research.google.com/drive/1-_f5XZPsChvfU1sJ0QqCePtIuc55LSdu?usp=sharing
 
-Any problems, please contact me!
-
-## Before the Setup instructions - a special note
-
-Early on in the course (on Day 2), I give a demo of a very cool, popular product called Claude Code. It's an AI coding tool, similar to Cursor that we use on the course. I'm only showing this as an example of Agentic AI in action; it's not a tool that's covered explicitly on this course, particularly as we're in Cursor. But if you want to use Claude Code yourself, the Quick Start guide from Anthropic is [here](https://docs.claude.com/en/docs/claude-code/quickstart).
-
-## OK - now on to Setup instructions
+## Setup instructions
 
 After we do the Ollama quick project, and after I introduce myself and the course, we get to work with the full environment setup.  
 
@@ -93,20 +58,3 @@ The charges for the exercises in this course should always be quite low, but if 
 1. For OpenAI: Always use model `gpt-4.1-nano` in the code
 2. For Anthropic: Always use model `claude-3-haiku-20240307` in the code instead of the other Claude models
 3. During week 7, look out for my instructions for using the cheaper dataset
-
-Please do message me or email me at ed@edwarddonner.com if this doesn't work or if I can help with anything. I can't wait to hear how you get on.
-
-<table style="margin: 0; text-align: left;">
-    <tr>
-        <td style="width: 150px; height: 150px; vertical-align: middle;">
-            <img src="assets/resources.jpg" width="150" height="150" style="display: block;" />
-        </td>
-        <td>
-            <h2 style="color:#f71;">Other resources</h2>
-            <span style="color:#f71;">I've put together this webpage with useful resources for the course. This includes links to all the slides.<br/>
-            <a href="https://edwarddonner.com/2024/11/13/llm-engineering-resources/">https://edwarddonner.com/2024/11/13/llm-engineering-resources/</a><br/>
-            Please keep this bookmarked, and I'll continue to add more useful links there over time.
-            </span>
-        </td>
-    </tr>
-</table>

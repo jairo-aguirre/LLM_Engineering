@@ -1,3 +1,4 @@
+
 name: Auto Create Pull Request
 
 on:
@@ -5,20 +6,37 @@ on:
     branches:
       - 'feature/*'
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   create-pull-request:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Create Pull Request using GitHub CLI
+      - name: Create Pull Request
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HEAD_BRANCH: ${{ github.ref_name }}
         run: |
-          # Create a PR targetting main if one doesn't exist yet
-          gh pr create \
+          set -euo pipefail
+
+          EXISTING_PRS=$(gh pr list \
+            --head "$HEAD_BRANCH" \
             --base main \
-            --head ${{ github.ref_name }} \
-            --title "Progress Update from ${{ github.ref_name }}" \
-            --body "Automated PR generated from recent commits on branch \`${{ github.ref_name }}\`. Please review changes before merging into \`main\`." || echo "PR already exists or no new commits."
+            --json number \
+            --jq 'length')
+
+          if [ "$EXISTING_PRS" -gt 0 ]; then
+            echo "Pull Request already exists."
+          else
+            gh pr create \
+              --base main \
+              --head "$HEAD_BRANCH" \
+              --title "Progress Update from $HEAD_BRANCH" \
+              --body "Automated PR generated from recent commits on branch $HEAD_BRANCH. Please review changes before merging into main."
+          fi

@@ -1,4 +1,3 @@
-
 name: Auto Create Pull Request
 
 on:
@@ -16,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Create Pull Request
         env:
